@@ -1,0 +1,90 @@
+# Live Image Morse Project
+
+## Overview
+
+This project runs a local web application that processes live image input and supports real-time communication. It can be executed using standard Flask or Flask-SocketIO (recommended).
+
+---
+
+## Prerequisites
+
+* Python **3.9 or 3.10**
+* `pip` package manager
+* A working webcam (for live image capture)
+* Browser (Chrome / Firefox recommended)
+
+---
+
+## Installation
+
+1. Clone or download the project.
+2. Navigate to the project directory.
+3. Install required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Project
+
+From the project root directory, run:
+
+```bash
+cd live_image_morse
+python app.py
+```
+
+### Using SocketIO (Recommended)
+
+If the project uses **Flask-SocketIO**, the same command applies:
+
+```bash
+python app.py
+```
+
+---
+
+## Accessing the Application
+
+After starting the server, open your browser and visit:
+
+```
+http://localhost:5000/
+```
+
+---
+
+## Notes
+
+* Ensure camera permissions are enabled in your browser.
+* If the port is already in use, stop the conflicting service or change the port in `app.py`.
+* For development, use a virtual environment to avoid dependency conflicts.
+
+---
+
+## Troubleshooting
+
+* **Module not found**: Re-run `pip install -r requirements.txt`
+* **Camera not detected**: Check OS and browser permissions
+* **Server not starting**: Verify Python version and installed packages
+
+---
+
+## Project Structure (Example)
+
+```
+live_image_morse/
+├── app.py
+├── requirements.txt
+├── templates/
+├── static/
+└── README.md
+```
+
+---
+
+## License
+
+This project is for educational and learning purposes.
