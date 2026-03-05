@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Image Recognition & Morse Code</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+
+    <!-- App Script -->
+    <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <h1>Live Object Detection & Morse Code</h1>
+
+    <div id="video-container">
+        <img src="{{ url_for('video_feed') }}" alt="Live Feed">
+    </div>
+
+    <div class="caption-box">
+        <p><strong>Detected Object:</strong>
+            <span id="object-label">Loading...</span>
+        </p>
+        <p><strong>Morse Code:</strong>
+            <span id="morse-code">Loading...</span>
+        </p>
+    </div>
+
+    <button onclick="window.location.reload()">Refresh Feed</button>
+</body>
+</html>
